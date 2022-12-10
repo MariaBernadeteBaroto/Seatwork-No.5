@@ -12,5 +12,7 @@ class Queue:
     # enqueue.append() method
     def enqueue(self, element):
         self._elements.append(element)
-        
-# dequeue.append() method
+
+    # dequeue.append() method
+    def dequeue(self):
+        return self._elements.popleft()

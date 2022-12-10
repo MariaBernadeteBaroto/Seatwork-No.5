@@ -8,6 +8,9 @@ from collections import deque
 class Queue:
     def _init_(self):
         self._elements = deque()
+
+    # enqueue.append() method
+    def enqueue(self, element):
+        self._elements.append(element)
         
-# enqueue.append() method
 # dequeue.append() method

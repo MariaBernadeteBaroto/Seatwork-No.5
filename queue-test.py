@@ -2,6 +2,7 @@
 # See how it works!
 
 from queues import Queue
+from queues import Stack
 
 #Implementation of __iter__ and __len__ methods;
 
@@ -13,3 +14,8 @@ for element in test:
     print(element)
 
 print(len(test))
+
+#test stack class
+test2 = Stack("1st Runner Up", "2nd Runner Up", "3rd Runner Up")
+for element in test2:
+    print(element)

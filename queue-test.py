@@ -3,11 +3,13 @@
 
 from queues import Queue
 
-test = Queue()
-test.enqueue("1st Runner Up")
-test.enqueue("2nd Runner Up")
-test.enqueue("3rd Runner Up")
+#Implementation of __iter__ and __len__ methods;
 
-print(test.dequeue())
-print(test.dequeue())
-print(test.dequeue())
+test = Queue("1st Runner Up", "2nd Runner Up", "3rd Runner Up")
+print(len(test))
+
+
+for element in test:
+    print(element)
+
+print(len(test))

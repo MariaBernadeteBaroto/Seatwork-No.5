@@ -19,3 +19,15 @@ print(len(test))
 test2 = Stack("1st Runner Up", "2nd Runner Up", "3rd Runner Up")
 for element in test2:
     print(element)
+
+#using heapq module
+from heapq import heappush
+
+fruits = []
+veges = []
+heappush(fruits, "orange")
+heappush(fruits, "apple")
+heappush(veges, "squash")
+
+print(fruits)
+print(veges)

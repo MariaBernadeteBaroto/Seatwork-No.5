@@ -24,10 +24,12 @@ for element in test2:
 from heapq import heappush
 
 fruits = []
-veges = []
 heappush(fruits, "orange")
 heappush(fruits, "apple")
-heappush(veges, "squash")
+
+
+#implemented heappop
+from heapq import heappop
+heappop(fruits)
 
 print(fruits)
-print(veges)

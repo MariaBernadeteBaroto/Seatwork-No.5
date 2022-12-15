@@ -30,13 +30,23 @@ class Queue:
     def dequeue(self):
         return self._elements.popleft()
 
+#Adding mixin class
+class IterableMixin:
+    def __len__(self):
+        return len(self._elements)
+
+    def __iter__(self):
+        while len(self) > 0:
+            yield self.dequeue()
+
+
 #Stack(Queue) class
 class Stack(Queue):
     def dequeue(self):
         return self._elements.pop()
 
 # Building Priority Queue Data Type
-class PriorityQueue:
+class PriorityQueue(IterableMixin):
     def __init__(self):
         self._elements = []
         self._counter = count()

@@ -6,6 +6,7 @@
 
 from collections import deque
 from heapq import heappop, heappush # Building Priority Queue Data Type
+from itertools import count 
 
 # Make the class iterable (report its length and optionally accepts initial elements)
 class Queue:
@@ -38,9 +39,11 @@ class Stack(Queue):
 class PriorityQueue:
     def __init__(self):
         self._elements = []
+        self._counter = count()
 
     def enqueue_with_priority(self, priority, value):
-        heappush(self._elements, (-priority, value))
+        element = (-priority, next(self._counter), value)
+        heappush(self._elements, element)
 
     def dequeue(self):
-        return heappop(self._elements)[1]
+        return heappop(self._elements)[-1]

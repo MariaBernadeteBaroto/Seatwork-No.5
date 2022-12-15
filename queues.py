@@ -5,6 +5,7 @@
 
 
 from collections import deque
+from heapq import heappop, heappush # Building Priority Queue Data Type
 
 # Make the class iterable (report its length and optionally accepts initial elements)
 class Queue:
@@ -33,3 +34,13 @@ class Stack(Queue):
     def dequeue(self):
         return self._elements.pop()
 
+# Building Priority Queue Data Type
+class PriorityQueue:
+    def __init__(self):
+        self._elements = []
+
+    def enqueue_with_priority(self, priority, value):
+        heappush(self._elements, (priority, value))
+
+    def dequeue(self):
+        return heappop(self._elements)
